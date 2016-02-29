@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @location.description %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+
+<p>
+  <strong>Map url:</strong>
+  <%= @location.map_url %>
+</p>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Meeting Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @location.meetings[0..4].each do |meeting| %>
+      <tr>
+        <td><%= meeting.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
