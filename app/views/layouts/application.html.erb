@@ -8,11 +8,41 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Campus Events</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><%= link_to("Events", events_path)%></li>
+              <li><%= link_to("Attendees", attendees_path)%></li>
+              <li><%= link_to("Meetings", meetings_path)%></li>
+              <li><%= link_to("Locations", locations_path)%></li>
+              <li><%= link_to("Sponsors", sponsors_path)%></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
 
 
 <div class="container">
   <div class="row">
-<%= yield %>
+
+      <div class="col-lg-8">
+        <%= yield %>
+      </div>
+
+      <div class="col-lg-4">
+        Vegan portland intelligentsia, kombucha yuccie hammock selfies messenger bag cardigan. Roof party ethical farm-to-table cronut biodiesel beard lumbersexual stumptown waistcoat thundercats, four loko disrupt. 8-bit craft beer poutine lomo. Cronut waistcoat kinfolk, direct trade vinyl lo-fi biodiesel try-hard crucifix cliche butcher offal brooklyn thundercats cold-pressed. Literally salvia fingerstache knausgaard man bun. Butcher brunch slow-carb kogi squid. Asymmetrical hella poutine waistcoat, cardigan bitters intelligentsia helvetica cornhole flannel plaid pug bespoke tilde street art.
+      </div>
+
   </div>
 </div>
 
