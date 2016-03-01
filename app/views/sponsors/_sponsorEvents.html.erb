@@ -1,0 +1,8 @@
+<ul>
+  <%sponsorEvents.events.each do |event| %>
+      <h3><%= link_to(event.name, event_path(event.id))%><h3>
+      <p>Start Date: <%= event.start_date %> <br/>
+      End Date: <%= event.end_date %> <br/>
+      </p>
+  <% end %>
+</ul>

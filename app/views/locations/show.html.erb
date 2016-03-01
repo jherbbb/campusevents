@@ -1,3 +1,8 @@
+<% content_for(:sidebar) do %>
+<%= render(partial: "locationMeetings", object: @location)%>
+<% end %>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -26,21 +31,7 @@
 </p>
 
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Meeting Name</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @location.meetings[0..4].each do |meeting| %>
-      <tr>
-        <td><%= meeting.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 
 

@@ -1,3 +1,11 @@
+<% content_for(:sidebar) do %>
+<p>
+  <strong>Location:</strong>
+  <%= @meeting.location.name %>
+</p>
+<% end %>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,6 +27,8 @@
   <strong>End time:</strong>
   <%= @meeting.end_time %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>

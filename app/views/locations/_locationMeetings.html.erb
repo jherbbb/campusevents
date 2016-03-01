@@ -1,0 +1,15 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Upcoming Meetings</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% locationMeetings.meetings[0..4].each do |meeting| %>
+      <tr>
+        <td><%= link_to(meeting.name, meeting_path(meeting.id))%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

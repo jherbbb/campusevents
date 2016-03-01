@@ -1,3 +1,12 @@
+<% content_for(:sidebar) do %>
+
+<h3><%= @event.name %>'s Sponsors</h3>
+<%= render(partial: "eventSponsors", object: @event)%>
+
+<% end %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,11 +29,7 @@
   <%= @event.url %>
 </p>
 
-<p>
-  <% @event.sponsors.each do |sponsor| %>
-    <%= sponsor.name %> <br/>
-  <% end %>
-</p>
+
 
 
 <table class="table table-hover">
